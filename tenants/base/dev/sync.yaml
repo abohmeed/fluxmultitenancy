@@ -1,16 +1,19 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
 metadata:
-  name: dev
+  creationTimestamp: null
+  name: gitlab-auth
   namespace: apps
 spec:
-  interval: 1m0s
-  ref:
-    branch: main
-  secretRef:
-    name: gitlab-auth
-  url: https://gitlab.com/abohmeed/myweatherapp
+  encryptedData:
+    password: AgCThCI3aE70NZpsyZz0KKYAII/hVW+AVYt3DyDDfFUMePA9xLaCzUNSXqlqflN+fAJakq6ih1D7ndnYLM7uoz4THV2B080TTMXnDeII9H9WT0QtQcUcTbSOwQE0TfdvWes+GQ4lNp38Sc8IlbjghNA+3iYWjsW7awdL13IuBPCR5uEUUPeItzYHuHWg3wGWiVFvRO0TBDCBjtFVYL4v/td80iQjk18V4wHsgWgjMu6hV/HBiCIj+gq5qbyDjE6guXkQrLCVZC8rir3QeUoci88u+3wmNiOd4aExfr82kDle8/NfsAk51muiZFzE1uuKNz/FdqJXefRxus8pCeIzcOu9DToOrnP86+y2qIpj3Al7vYNvMlvpje1oPK5cf2WPkt6vfRgwb+ww8IXCi/s+H2HiWiLGjAEhktqpJuIrhw0R4ctfRnibcpe7GSKoEjQcE73d2eii2aIeEfZloSeiC/OR2mLnGyB0b1ah/2fLprcvEhxcgchvMD4rblLv0DDHbze42hvGJMs1aUTu60m727ce43JaJFmlkwlCTfZXBX1d9mMxV5fNRpSx/JHmAqjOTvGHaagSQaKIorUjRHEorLLYJwL8eq9F5mjhtwy2dEkTRCGo6U65qFcb3faV9t00jwT6alXHuB6OtHgvbMih89rF6J6hi1/S94Lcj7Y9ppZV9lX1AfV04OnUtlxSPYqbmyFt+TCquqpbFAIEfltYHBvaXlfWi1lNQYsTtQNo1HIpstiHXUBGbSqq
+    username: AgBacC7B+CIsQQwDF4k1bo3oxiSLBCkA61PbdRGMD7SVUT4Aq6RW1k9fFEFJ6Y4PicJ6shtk7EuUWq/voiRRox0CGFmYpQ61/KHqUXC/ln4G6CzbvbD/g/S32XB1LCR674Z16p4jjuLQzTlOKSfqXBZdlJ0p7D8dkhiIhdeudY6tFYx3LjKi0qa7phDsTToTW932+R75eUl1QOCf/emtVJ5cr3ntHxab9q136pyJjZlBmZnb1nUAuaTw0qbVmFWiGSDEFKsbOfniFmMYjtxRcBOfNs5daTWSLkhxsmalyi4zZB5hIsVtPS3woeQJdHPgkcyvRvSdAyn1Qg4Is+lFFoVgFg9h9rp83aPl24Sg0+0H3l7tdHxtz0Bi85TL5yTwnUlxQaJFU+AMsvAjjN3O5rfe4Vf3LCINTXivOuNIJlX9iZLLEKXH0ijx7ozLzo0yXBxceFMtgo4hL0T7dexFQvXFZK/I+MytByjmIihvXsTpkI95cC4nZL9fSl2Cj0d1PsRPomH0sEsO4f1twGPnCRxzdIXpnEGFL4ZOzLJfmYHqBV1+3KD/5Mxq87MfHvvuyGLQvuca87o//2pYCq19JIVc5V1pN99MuoUIpuCY0iZmHmcI9/GnJ3pfJ7kcvssYJ5aiQLiaB/WczQOZNNovmjLBCht7Ye7C96KfwMzetbKU3gTM6Q/YNZHqCyVlt/o5yZ0Eg9iyJX/qOoU69s3IqmnXo3E=
+  template:
+    metadata:
+      creationTimestamp: null
+      name: gitlab-auth
+      namespace: apps
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
