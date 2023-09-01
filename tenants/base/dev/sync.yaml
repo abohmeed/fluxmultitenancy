@@ -1,19 +1,43 @@
 ---
-apiVersion: bitnami.com/v1alpha1
-kind: SealedSecret
+apiVersion: v1
+kind: Secret
 metadata:
-  creationTimestamp: null
-  name: gitlab-auth
-  namespace: apps
-spec:
-  encryptedData:
-    password: AgBZucZMkTk9czBdVafq6n9uj4UkTivZ+6mRqpN9Z2XPMKex075GteKDHFF5jfpFxhD9NmB5lLP2rafsMU0gRY09TcRgd4vrAEAVIjlJ5fn0J9aHS8LXVkOZaM8bCibfr4w78RqGfPevXSGh0YQMl0JNzyT8OCv5in+XxPJwJ2yZyzmGdE6qpGUQIleGY2wlTq+Lpq4tmSmNOPo20LDhy706CS7LMriqLPO5N/ReM37HcXR5Z7xGaYHDmo1GICtR0drHZZg09oTt7MW19DHg5B8ZdroKTk8amf8HhDWVJ6tae+7I/NBxRU7zn8zYmKvfDSvNdpFV0rNNEf5saemmf1MoeNNU5s8IP5nOMpLvZoFhntejUUInvgOeJoKUn0UBQZkzH+uV5CLbr9y0Y4WzoqxhWybut5+h72guTCJ+AjgkZ46cvfFfEt5lu/hsBfRhwI4E5WBDJFdvr4gEG2BwQ1alQhNYjnWuU45okNSi5wgLORjArY8g8ZdWc9wJomHfOVDhNEyRVhbQO0mZBIjkZCaOzyZdP/oHNZlcQH+dsmAkN48ltwp3X6RkpyZuwqDrsY0ApiZnZvKs5gd9BLl/UFhxZkKd+wKxTwXXg4XEEo9H28xzp+CbEgr0XZynEuL39+g1B9Q0ZhoV721JfT4rJHS/XeGm9GfBgPRouPKtf2U+HD8ccVu0i8deRpq8PCVRuyh15PwdsasfEXUfZTNhwgb53sBCF8wHCrtMsqjEfKwh7HOLbJLO+91H
-    username: AgBRh+cZHS8EmKEIZEjMLRUhq7/FXxf5rbv+VCvjgW839H4XXE7gGRWP/pMWAua6LF+zfqZPOvUfh/f34+q5/2v3IOrq851oTQhPksCJXsxZlnLqKVriA5B/a/ZJqxE+M+2azC9B1AvJpK89qimlNOugUe0uRgllXDGfm+Y8GHjtZucA780t69GOKACOQHhZ2Ct2EsqQd6uHxJAWbETIof4RdmUwGsQxN/zNuURUNN+brcm4Q0nC6pyIPyf11A90h2A3gj/fCaCG55mPoIwPLj7bTynVyQcIGXnrnO6rPB9ToTfQrJuvk332Ok78KQJh2knGSKYKssbR1CWMrhDOy/S5zYFmeTVP51JU3QcUxaUK1QNIqrBdd1id9A3kzo2IblH+s92DzLiiAvrwQnHo2Hmca/fm4EWxp226scvVJ2Wy5lc42MaFKQbio2WujV2bwcP+kJXBZvrlLhGMl93qBzSCKVPeDaDFL2iMleqIwnzwOtLEEKbuGnMG+vOM+AaL3+Rgt6CV90Gxby7cXIw4xE53clT036//xlGtxws/dDKSF1FG5qOZ7SCMiZ/FX4Y8aaCjy11E6XDlNx6BBo3yCrYYbBa8d1f1Uajnq4R7hGPrQnIplXCFPRRPChUPm9MiWj8AqAeyqjK6zS30gLbtWTHid9Zl/JTCOFKBAF9dv6TNTFe9VUlclL8EF/+RL742DYsBmQ1JkMKGV4fbUb3TXzhRzGk=
-  template:
-    metadata:
-      creationTimestamp: null
-      name: gitlab-auth
-      namespace: apps
+    name: gitlab-auth
+    namespace: apps
+stringData:
+    password: ENC[AES256_GCM,data:t41jHE18oCiQkY5jh7OOYaZ9F7iUIscsuG8DSZfyw2zmozzbJ0aVNg==,iv:leF4sjoC/woBPrCYngs3/uNfWu4tGVeTxoI3sMGhDIA=,tag:mUO0z/z11PuusVD3YpuvfQ==,type:str]
+    username: ENC[AES256_GCM,data:pvCWtwlIZC+rPjK7SaesacNE,iv:La3+Tbnrg9YdqgZk2oGdUpEQgq7tJ+amjsMHM2k3o+E=,tag:alo5ldIgZpjWA5gJrqoi5Q==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2023-09-01T08:37:02Z"
+    mac: ENC[AES256_GCM,data:sYDzURvPjILK1OmHG54qhk/BAIDcFUBERALUv/GwXZnIV53xjwNeopS9xlggDO/vfkfgt3wbEQFPXeRyS3jE4ocCkcKd5aMx3rFtyQsQve5EWeUpykxf3zKEuTAqAn2UjPmWfDqW6s1J8RE4L8BreKifOT7frPUjECdxMvuNZg0=,iv:qb2zu96XiYQILLDp+iCc5rlo4jKXz0bmIzPdxf8dZC4=,tag:z4ai7Cafhir44OlzUN9NZQ==,type:str]
+    pgp:
+        - created_at: "2023-09-01T08:37:02Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAx546Ghm4HPxAQ/9EdeYHUpC9Icst0n9P02HzeKeMtbKWm7hy89iKYmtYY9s
+            UW/4PtNe3jhmM5Pq+//TnFGwSMqpRkdPLHD5FxcxL1T12mbnRLdl6KnGNff3wErL
+            ahp1vdnpxGR04MbV33ozDlW6RPCeK8eloHYnarofmqLz1sYyRk5JG/Ca3EfjhiUG
+            GAdIuqH2BCtBDl91j959FfUJQFWWjJvUhREQkbeMJEer+1aYWJadMrsirjWOaFR+
+            Tg9W4DaQrPDNl4VFPpyI6ApGZh1u6nwjsalfoakTM619McNwrIj1uWZ44UEiCOpN
+            9bN2RaJQxooEFukDDq6iun2bl60FmjuX3QL3SD2L4I9CcqGrvv1ClUQO+UF6sYVP
+            0FHUiAiSwpCsxn2njvA3UzWC9Cvf8I5Eb9LfgROTN1vu++yHliRV4a431BgPlzvD
+            TsaacLyj+XDYcF/4G1Fitp89jlwZL780P60kZ0i5YSCwJ4skkDMz9ewYklqfRPQ5
+            AepM77BPDhpPRascU/ibCLlHBfrmnNZ2WABne0t9jaICbVbCm1zOCL0b0lxCY8Tp
+            kTG9NIOVml2OozQNAyT2DgA+8AjB9UT4j5nNRVpwTnOx8tUeazzI6aX1szxd1TIb
+            7bhLHE+5jb8sVTYuYD9NtxXveVp9m0X1H0IEdyemVpGkcjsmm4TqBJJS0xddpQXS
+            XgEpMMjJ5T+b9vyRRGd5b4BVzAygX6S+RqefrFXf1GFbeTyio13BjXoBpRcM8XBn
+            rzu7CD1fq0D8KB30gRS9T0XjmIjBSFpodhTCQsx01n9PVxDojAYPh0hAH7OwSrQ=
+            =C+Sa
+            -----END PGP MESSAGE-----
+          fp: 99F6DD21668C977FA0E35AB64C928FA9E7FF041B
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
