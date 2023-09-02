@@ -39,6 +39,19 @@ sops:
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
 ---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: dev
+  namespace: apps
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: gitlab-auth
+  url: https://gitlab.com/abohmeed/myweatherapp
+---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
